@@ -11,7 +11,13 @@ config_version=3
 [application]
 
 config/name="Die Bricks!"
+run/main_scene="res://Scenes/LevelOne.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=640
+window/size/height=360
 
 [rendering]
 
