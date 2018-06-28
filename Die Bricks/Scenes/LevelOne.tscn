@@ -4,12 +4,12 @@
 [ext_resource path="res://Textures/Sprites/paddle.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Sprites/ball.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 40, 4 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 4, 4 )
@@ -36,7 +36,7 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="Collision" type="CollisionShape2D" parent="Paddle" index="1"]
 
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Ball" type="RigidBody2D" parent="." index="1"]
@@ -70,7 +70,8 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Collision" type="CollisionShape2D" parent="Ball" index="1"]
 
-shape = SubResource( 1 )
+position = Vector2( -0.0802612, -0.0802307 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Walls" type="StaticBody2D" parent="." index="2"]
