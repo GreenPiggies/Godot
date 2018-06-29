@@ -6,11 +6,16 @@
 [ext_resource path="res://Textures/Sprites/brick.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 40, 4 )
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id=3]
+=======
+[sub_resource type="RectangleShape2D" id=2]
+>>>>>>> e92fa2ba8de8e7bfd09d794051b32143cf3ceb01
 
 custom_solver_bias = 0.0
 extents = Vector2( 30, 14 )
@@ -38,12 +43,48 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 [node name="Collision" type="CollisionShape2D" parent="Paddle" index="1"]
 
 shape = SubResource( 2 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Anchor" type="Position2D" parent="Paddle" index="2"]
 
+<<<<<<< HEAD
 position = Vector2( 0, 32 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+=======
+position = Vector2( 320, 288 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 2
+mass = 1.0
+friction = 0.0
+bounce = 1.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 200, -200 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = 0.0
+_sections_unfolded = [ "Angular", "Linear", "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="Ball" index="0"]
+
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Collision" type="CollisionShape2D" parent="Ball" index="1"]
+
+position = Vector2( -0.0802612, -0.0802307 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+>>>>>>> e92fa2ba8de8e7bfd09d794051b32143cf3ceb01
 
 [node name="Walls" type="StaticBody2D" parent="." index="1"]
 
